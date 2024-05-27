@@ -1,0 +1,8 @@
+com\trabalho2bimestre\app\Aplicacao.class
+com\trabalho2bimestre\modelo\Exercicio.class
+com\trabalho2bimestre\conexao\ConexaoMysql.class
+com\trabalho2bimestre\conexao\FabricaConexao.class
+com\trabalho2bimestre\conexao\ConexaoPostgre.class
+com\trabalho2bimestre\modelo\Treino.class
+com\trabalho2bimestre\modelo\Cliente.class
+com\trabalho2bimestre\teste\TesteConexao.class
