@@ -9,7 +9,7 @@ public final class FabricaConexao {
 
    private static ConexaoMysql conexaoMysql = new ConexaoMysql();
     
-    public static Connection getConnectionPostgre() throws Exception {
+    public static Connection getConnectionMysql() throws Exception {
         return conexaoMysql.getConnection();
     }
 }

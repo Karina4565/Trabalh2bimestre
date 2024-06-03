@@ -8,7 +8,7 @@ public class TesteConexao {
     
     public static void teste(){
         try {
-            Connection conn = FabricaConexao.getConnectionPostgre();
+            Connection conn = FabricaConexao.getConnectionMysql();
             System.out.println("Conectou!!!");
         } catch (Exception e) {
             System.out.println(e.getMessage());

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.trabalho2bimestre.modelo;
 
 
@@ -11,6 +8,8 @@ import java.util.List;
 
 
 public class Cliente {
+
+    
     
     private String nome;
     
@@ -18,7 +17,7 @@ public class Cliente {
             
     private String email;
     
-    private int id;
+    private Integer id;
     
     private String altura;
     
@@ -26,13 +25,16 @@ public class Cliente {
     
     private String genero;
     
-    private String dataNascimetno;
 
-    public int getId() {
+    public Cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -60,23 +62,11 @@ public class Cliente {
         this.genero = genero;
     }
 
-    public String getDataDeNascimetno() {
-       return dataNascimetno;
-    }
-
-    public void setDataDeNascimetno(String dataDeNascimetno) {
-        this.dataNascimetno = dataDeNascimetno;
-    }
     
  
 
     private List<Treino> treinos = new ArrayList<>();
 
-    public Cliente(String nome, String telefone, String email) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -113,6 +103,19 @@ public class Cliente {
             
     public boolean removeTreino(Treino treino) {
         return treinos.remove(treino);
+    }
+    
+    public Cliente(String nome, String telefone, String email, String altura, String peso, String genero) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.altura = altura;
+        this.peso = peso;
+        this.genero = genero;
+    }
+
+    public void getId(char c) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

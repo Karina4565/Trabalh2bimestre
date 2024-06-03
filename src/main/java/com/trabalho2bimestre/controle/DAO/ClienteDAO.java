@@ -12,13 +12,21 @@ public class ClienteDAO extends DAOAbstrato {
     
     
      private static final String INSERIR = "INSERT INTO cliente"
-            + "( nome,email,data_nascimento,genero,altura,telefone) "
-            + "VALUES (?,?,?,?,?,?)";
-
+            + "( nome,email,genero,altura,telefone) "
+            + "VALUES (?,?,?,?,?)";
+     
+      private static final String ATUALIZAR = "UPDATE cliente SET "
+            + " nome = ?, "
+            + " email = ?, "
+            + " genero = ?, "
+            + " altura = ?, "
+            + " telefone = ? "
+            + " WHERE id = ?";
+ 
     public ClienteDAO(Connection conn) {
         super(conn);
     }
-    
+  
     
     public void inserir(Cliente cliente) throws Exception {
         try {
@@ -26,10 +34,9 @@ public class ClienteDAO extends DAOAbstrato {
 
             psmt.setString(1, cliente.getNome());
             psmt.setString(2, cliente.getEmail());
-            psmt.setString(3, cliente.getDataDeNascimetno());
-            psmt.setString(4, cliente.getGenero());
-            psmt.setString(5, cliente.getAltura());
-            psmt.setString(6, cliente.getTelefone());
+            psmt.setString(3, cliente.getGenero());
+            psmt.setString(4, cliente.getAltura());
+            psmt.setString(5, cliente.getTelefone());
 
             
 
@@ -41,10 +48,30 @@ public class ClienteDAO extends DAOAbstrato {
                 cliente.setId(rs.getInt(1));
             }
           } catch (SQLException e) {
-            System.out.println("Erro ao inserir Pessoa: " + e.getMessage());
+            System.out.println("Erro ao inserir Cliente: " + e.getMessage());
         } finally {
             fecharRecursos(null, psmt, rs);
         }
     }
+  public void atualizar(Cliente cliente) throws Exception {
+        try {
+            psmt = conn.prepareStatement(ATUALIZAR);
+            psmt.setString(1, cliente.getNome());
+            psmt.setString(2, cliente.getEmail());
+            psmt.setString(3, cliente.getGenero());
+            psmt.setString(4, cliente.getAltura());
+            psmt.setString(5, cliente.getTelefone());
+            psmt.setInt(6, cliente.getId());
 
+            
+
+        
+            psmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao atualizar Cliente: " + e.getMessage());
+        } finally {
+            fecharRecursos(null, psmt, null);
+        }
+    }
 }
