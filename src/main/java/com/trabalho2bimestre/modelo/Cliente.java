@@ -2,14 +2,13 @@
 package com.trabalho2bimestre.modelo;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 
 public class Cliente {
-
-    
     
     private String nome;
     
@@ -25,9 +24,19 @@ public class Cliente {
     
     private String genero;
     
+    private LocalDate dataNascimento;
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    
 
     public Cliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public Integer getId() {
@@ -61,9 +70,6 @@ public class Cliente {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-
-    
- 
 
     private List<Treino> treinos = new ArrayList<>();
 
@@ -105,18 +111,23 @@ public class Cliente {
         return treinos.remove(treino);
     }
     
-    public Cliente(String nome, String telefone, String email, String altura, String peso, String genero) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-        this.altura = altura;
-        this.peso = peso;
-        this.genero = genero;
-    }
+    
 
     public void getId(char c) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    public Cliente(String nome, String email, LocalDate dataNascimento, String genero, String altura, String telefone) {
+    this.nome = nome;
+    this.email = email;
+    this.dataNascimento = dataNascimento;
+    this.genero = genero;
+    this.altura = altura;
+    this.telefone = telefone;
+}
+
+    
+    
     
 }
 

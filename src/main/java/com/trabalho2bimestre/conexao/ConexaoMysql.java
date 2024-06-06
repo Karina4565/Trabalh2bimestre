@@ -8,7 +8,7 @@ public class ConexaoMysql {
     
     
      public Connection getConnection() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/TrabalhoBD";
+        String url = "jdbc:mysql://localhost:3306/trabalhoDB";
         String usuario = "admin";
         String senha = "123456";
 

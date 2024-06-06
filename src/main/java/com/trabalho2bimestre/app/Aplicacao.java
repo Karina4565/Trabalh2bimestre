@@ -10,7 +10,7 @@ public class Aplicacao {
     public static void main(String[] args) {
         try {
             
-            //TesteConexao.teste();
+            TesteConexao.teste();
             ClienteTeste.teste();
             
         } catch (Exception ex) {
