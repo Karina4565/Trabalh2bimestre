@@ -5,13 +5,15 @@ import com.trabalho2bimestre.controle.servico.ClienteServico;
 import com.trabalho2bimestre.modelo.Cliente;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ClienteTeste {
     
     public static void teste() throws Exception {
 
-      //inserir();
-          atualizar();
+     // inserir();
+          //atualizar();
        // excluir();
        // todos();
  
@@ -19,14 +21,14 @@ public class ClienteTeste {
     
     
     public static void inserir() throws Exception {
-    Cliente cliente = new Cliente("Julia", "teste@gmail.com", LocalDate.of(2020, 2, 17), "F", "1,0", "44988089777");
+    Cliente cliente = new Cliente("Maria", "1teste@gmail.com", LocalDate.of(2020, 2, 17), "F", "1,0", "441988089777");
 
         ClienteServico.inserirCliente(cliente);
     
     }
     
     public static void atualizar() throws Exception {
-         Cliente cliente = new Cliente("Julia", "teste@gmail.com", LocalDate.of(2020, 2, 17), "I", "1,0", "44988089777");
+        Cliente cliente = new Cliente("Larissa", "teste@gmail.com", LocalDate.of(2020, 2, 17), "F","1,0", "44988089");
 
           cliente.setId(1);
     
@@ -45,7 +47,11 @@ public class ClienteTeste {
     }
     
      public static void todos() throws Exception{
-         ClienteServico.todasClientes();
+        try {
+            ClienteServico.todasClientes();
+        } catch (Exception ex) {
+            Logger.getLogger(ClienteTeste.class.getName()).log(Level.SEVERE, null, ex);
+        }
          
         List<Cliente> clientes = ClienteServico.todasClientes();
         

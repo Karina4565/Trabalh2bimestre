@@ -2,8 +2,36 @@
 package com.trabalho2bimestre.modelo;
 
 
-public class Fucionario {
+public class Funcionario {
 
+    public Funcionario(String nome, String email, String telefone) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
+    
+    private String nome;
+    
+    private  String email;
+    
+    private String telefone;
+    
+    private int id;
+
+    public Funcionario() {}
+        
+
+   
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
+    
     public String getNome() {
         return nome;
     }
@@ -28,14 +56,7 @@ public class Fucionario {
         this.telefone = telefone;
     }
     
-    private String nome;
-    
-    private  String email;
-    
-    private String telefone;
 
-    public void setId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
     
 }

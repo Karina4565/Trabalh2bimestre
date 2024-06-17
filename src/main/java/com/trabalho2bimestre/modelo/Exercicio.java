@@ -1,11 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.trabalho2bimestre.modelo;
 
 
 public class Exercicio {
+
+    public Exercicio(String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+    
+    public Exercicio() {
+   
+    }
+    
+    private String nome;
+    
+    private String descricao;
+    
+    private int id;
 
     public String getNome() {
         return nome;
@@ -22,8 +34,14 @@ public class Exercicio {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    private String nome;
-    private String descricao;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
 
 

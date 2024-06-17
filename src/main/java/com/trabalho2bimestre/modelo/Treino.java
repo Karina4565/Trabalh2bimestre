@@ -1,22 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.trabalho2bimestre.modelo;
 
 public class Treino {
-    
-    private String nome;
-    private String descricao;
-    private String repeticao;
-
-    public String getRepeticao() {
-        return repeticao;
-    }
-
-    public void setRepeticao(String repeticao) {
-        this.repeticao = repeticao;
-    }
 
     public String getNome() {
         return nome;
@@ -33,8 +18,32 @@ public class Treino {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-  
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Treino(String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
     
+    public Treino() {
+      
+    }
+    
+      
+    private String nome;
+    
+    private String descricao;
+    
+    private int id;
+
+   
     
     
 }

@@ -4,7 +4,6 @@ package com.trabalho2bimestre.modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 
@@ -20,7 +19,7 @@ public class Cliente {
     
     private String altura;
     
-    private String peso;
+    //private String peso;
     
     private String genero;
     
@@ -55,13 +54,6 @@ public class Cliente {
         this.altura = altura;
     }
 
-    public String getPeso() {
-        return peso;
-    }
-
-    public void setPeso(String peso) {
-        this.peso = peso;
-    }
 
     public String getGenero() {
         return genero;
